@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import FitnessForm from './FitnessForm';
+import FitnessProgram from "./FitnessProgram"
 function App() {
+
+  const [fitnessEvent, setFitnessEvent] = React.useState({});
+
+
+  function submitForm(payload) {
+
+    if (payload !== null || undefined) {
+      setFitnessEvent(payload);
+      console.log(payload)
+    }
+  }
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+      <FitnessForm submit={submitForm} />
+      <FitnessProgram />
+
+
     </div>
   );
 }

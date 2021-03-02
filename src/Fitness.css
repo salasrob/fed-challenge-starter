@@ -1,0 +1,22 @@
+.card-title{
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+    display: inline-flex;
+    margin-top:0px;
+    margin-left:15px
+}
+.subtitle{
+    margin-left:15px
+}
+.card {
+    max-width: min-content;
+    min-height: min-content;
+}
+.avatar {
+    float:right;
+
+}
+.card:hover{ 
+    box-shadow: 1px 8px 20px grey;
+   transition:  box-shadow .6s ease-in;
+ }
